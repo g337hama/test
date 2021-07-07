@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include <std追加
+#include <stdlib.h>追加[D[D[//追加
+##include <math.h> //sqrtを記述しているから
 
-int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
+double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。
 {
-  int y;
-  if( x <= 0 ){
+  double y;
+  if( x < 0 ){ //x>=0の時の平方根を返すのでx=0が含まれていてはいけない
     exit(1);
   }
   y = sqrt(x);
@@ -16,6 +17,7 @@ int main(void)
   int i;
   double *x = (double *)malloc(sizeof(double) * 100);
 
+  i = 0; //初期値が設定されていない
   while( i <= 100 ){
     x[i] = myRoot((double)i);
     i++;
@@ -32,4 +34,4 @@ int main(void)
 
   free(x);
   return 0;
-}[C[D
+}[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[[[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[C[C[B
