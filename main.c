@@ -1,11 +1,9 @@
-[A[B#include <stdio.h>
-#include <stdlib.h> //追加
-#include <math.h> //追加
+#include <stdio.h>
 
 int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
-  double y;  //double型へ変更
-  if( x < 0 ){  //x<0へ変更
+  int y;
+  if( x <= 0 ){
     exit(1);
   }
   y = sqrt(x);
@@ -14,12 +12,13 @@ int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないと�
 
 int main(void)
 {
-  int i=0;//i=0;へ変更
+  int i;
   double *x = (double *)malloc(sizeof(double) * 100);
+
   while( i <= 100 ){
     x[i] = myRoot((double)i);
-  i++;
-    }
+    i++;
+  }
 
   //以下は確認用(このままで良い)
   printf("x[0]=%f\n", x[0]);
