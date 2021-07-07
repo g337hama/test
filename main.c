@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>//追加
 #include <math.h> //追加
-
 int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
  double y;/double型へ変更
@@ -11,10 +10,9 @@ if( x < 0 ){ //x<0へ変更
   y = sqrt(x);
   return y;
 }
-
 int main(void)
 {
-  int i;
+  int i=0;//i=0へ変更
   double *x = (double *)malloc(sizeof(double) * 100);
 
   while( i <= 100 ){
