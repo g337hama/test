@@ -1,2 +1,4 @@
-a.exe: main.c
-       g++ -std=c++11 main.c
+all: main.c
+	gcc -Wall -O -o main main.c -lm
+clean:
+	rm -f main *~  
